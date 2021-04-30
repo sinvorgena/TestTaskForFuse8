@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+a{
+  color: black;
+  text-decoration: none;
+}
+.App{
+  margin: 36px 50px 77px;
+  font-family: 'Open Sans', sans-serif;
+  display: grid;
+  grid-auto-rows: auto auto auto auto;
+  grid-gap: 45px 0;
+  box-sizing: border-box;
+}
+.mainTitle{
+  margin: 0 auto;
+  color: #45852D;
+}
+.filterBox{
+  margin: 0 auto 0 0;
+  width: 474px;
+  &__title{
+    margin: 0 13px 0 0;
+    color:#363636;
+    font-weight: 700;
+  }
+  &__input{
+    border-radius: 25px;
+    height: 50px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    font-size: 22px;
+    width: 410px;
+    border: 1px solid #D8D8D8;
+    &:focus{
+      outline: none;
+      border: 1px solid #45852D;
+    }
+  }
+}
+.cardsBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 30px 0;
+}
+.card{
+  width: 380px;
+  border: 1px solid #D8D8D8;
+  height: 400px;
+  margin: 0 auto;
+  display: grid;
+  background: #F8F8F8;
+  grid-template-rows: 227px auto;
+  &__title{
+    font-weight: 700;
+    font-size: 20px;
+  }
+  &__img{
+    position: relative;
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__info{
+    padding: 20px;
+  }
+  &__typeOfHouse{
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    color: white;
+    padding: 8px 8px 5px 8px;
+    font-weight: 700;
+    font-size: 12px;
+    &_Indepent{
+      background: #006F79;
+    }
+    &_Restaurant{
+      background: #EC6608;
+    }
+  }
+  &__address{
+    margin: 3px 0 0 0;
+  }
+  &__priceFrom{
+    margin: 30px 0 0 0;
+    & span{
+      margin: 0 0 0 5px;
+      font-weight: 700;
+    }
+  }
+  &__sharedOwnership{
+    margin: 7px 0 0 0;
+  }
+}
+.seeMoreBtn{
+  margin: 0 auto;
+  border: 1px solid #D8D8D8;
+  box-sizing: border-box;
+  background: white;
+  font-size: 16px;
+  border-radius: 25px;
+  font-weight: 700;
+  padding: 12px 53px 12px 33px;
+  & span{
+    position: relative;
+    &::after{
+      content: "";
+      width: 3px;
+      height: 12px;
+      right: -14px;
+      top: -1px;
+      border-radius: 2px 2px 0 0;
+      transform: rotate(-35deg);
+      position: absolute;
+      background: #363636;
+    }
+    &::before{
+      content: "";
+      width: 3px;
+      height: 12px;
+      right: -14px;
+      bottom: -1px;
+      border-radius: 0 0 2px 2px;
+      transform: rotate(35deg);
+      position: absolute;
+      background: #363636;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .filterBox{
+    margin: 0 auto 0 auto;
+    width: 474px;
+    &__title{
+      color:#363636;
+      font-weight: 700;
+    }
+    &__input{
+      height: 50px;
+      width: 418px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .App{
+    margin: 36px 10px 77px;
+  }
+  .filterBox{
+    margin: 0 auto 0 auto;
+    width: 320px;
+    &__title{
+      color:#363636;
+      font-weight: 700;
+    }
+    &__input{
+      height: 50px;
+      width: 250px;
+    }
+  }
+  .mainTitle{
+    font-size: 30px;
+  }
+}
